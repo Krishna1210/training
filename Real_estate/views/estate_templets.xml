@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="hello_world" name="Hello World">
+        <h4>
+            <strong>Hello World</strong>
+        </h4>
+    </template>
+
+    <template id="real_estate_properties_list">
+        <t t-call="website.layout">
+            <div>
+                <t t-out="SomeAdditionalData"/>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <th>Sequence</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>State</th>
+                        <th>expected price</th>
+                    </thead>
+                    <tbody>
+                        <t t-set="sequence" t-value="0"/>
+                        <t t-foreach="abc" t-as="properties">
+                            <t t-set="sequence" t-value="sequence + 1"/>
+                            <!-- <tr t-att-class="sequence % 2 == 0 and 'o_even' or ''"> -->
+                            <tr t-attf-style="font-weight: bold;#{sequence % 2 == 0 and 'background: cadetblue;' or 'background: burlywood;'}">
+                                <td>
+                                    <t t-out="sequence" />
+                                </td>
+                                <td>
+                                    <t t-out="properties.name" />
+                                </td>
+                                <td>
+                                    <t t-if="properties.description" t-out="properties.description" />
+                                    <t t-else="">No Description Available</t>
+                                </td>
+                                <td>
+                                    <span t-field="properties.state"/>
+                                </td>
+                                <td>
+                                    <t t-out="properties.expected_price"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+
+    <template id="hello_user" name="Hello World templets">
+        <t t-call="website.layout">
+            <h4>
+                <strong>Hello <t t-out="user.name"/>
+                </strong>
+            </h4>
+            <t t-call="Real_estate.real_estate_properties_list">
+                <t t-set="SomeAdditionalData">Hello</t>
+            </t>
+        </t>
+    </template>
+
+    <template id="properties_templet" name="templets">
+        <t t-call="website.layout">
+
+        </t>
+    </template>
+
+</odoo>

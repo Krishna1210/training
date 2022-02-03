@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="property_menu" model="website.menu">
+            <field name="name">properties</field> 
+            <field name="url">/properties</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">10</field>
+        </record>
+
+        <record id="real_estate" model="estate.properties">
+            <field name="name">properties </field>
+            <field name="description">&lt;p&gt;Hello World&lt;/p&gt;</field>
+            <field name="state">new</field>
+        </record>
+    </data>
+</odoo>

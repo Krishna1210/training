@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="estate_actionq" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">leased.property</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="leas_properies_actions" model="ir.actions.act_window">
+        <field name="name">leas property</field>
+        <field name="res_model">leas.propertys</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem parent="Real_estate.estate_menu_root" id="lease_property"/>
+    
+    <menuitem id="lease_propertys"   parent="lease_property"/>
+    <menuitem id="lease_p" parent="lease_propertys" action="estate_actionq"/>
+
+    <menuitem parent="Real_estate.estate_menu_root" id="lease_propertyrys"/>
+    <menuitem id="lease_pro" parent="lease_propertys" action="leas_properies_actions"/>
+
+</odoo>

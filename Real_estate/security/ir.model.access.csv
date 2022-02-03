@@ -1,0 +1,7 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_estate_properties,access_estate_properties,model_estate_properties,Real_estate.module_group_brokrage,1,0,0,0
+access_estate_properties_m,access_estate_properties_m,model_estate_properties,Real_estate.module_group_manager,1,1,1,1
+access_property_type,access_property_type,model_property_type,Real_estate.module_group_manager,1,1,1,1
+access_estate_tag,access_estate_tag,model_estate_tag,Real_estate.module_group_manager,1,1,1,1
+access_estate_offer,access_estate_offer,model_estate_offer,Real_estate.module_group_manager,1,1,1,1
+access_estate_properties_manager,access_estate_properties_manager,model_estate_properties,Real_estate.module_group_manager,1,1,1,1
