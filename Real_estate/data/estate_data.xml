@@ -2,16 +2,18 @@
 <odoo>
     <data>
         <record id="property_menu" model="website.menu">
-            <field name="name">properties</field> 
+            <field name="name">properties</field>
             <field name="url">/properties</field>
             <field name="parent_id" ref="website.main_menu"/>
             <field name="sequence" type="int">10</field>
         </record>
 
-        <record id="real_estate" model="estate.properties">
-            <field name="name">properties </field>
-            <field name="description">&lt;p&gt;Hello World&lt;/p&gt;</field>
-            <field name="state">new</field>
-        </record>
+      <record id="menu_form" model="website.menu">
+            <field name="name">Add property</field>
+            <field name="name">Add property</field>
+            <field name="url">/property/add</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">22</field>
+     </record>
     </data>
 </odoo>

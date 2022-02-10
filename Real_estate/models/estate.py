@@ -4,15 +4,17 @@ from odoo.exceptions import UserError
 
 
 class Buyer_partner(models.Model):
-    
     _inherit = 'res.partner'
 
     is_buyer = fields.Boolean(domain="[('is_buyer', '=', ['True'])]")
 
+
 class estate_property(models.Model):
     _name = "estate.properties"
     _description = "estate property"
-
+    _inherit = [
+        'mail.thread',
+        'mail.activity.mixin', ]
 
     def get_description(self):
         if self.env.context.get('is_my_property'):
@@ -111,7 +113,7 @@ class estate_property(models.Model):
             record.state = 'sold'
 
     def action_cancel(self):
-          for record in self:
+        for record in self:
             if record.state == "sold":
                 raise UserError("Sold property can not be cancel")
             record.state = 'cancel'
@@ -132,7 +134,6 @@ class estate_tag(models.Model):
 
     name = fields.Char()
     color = fields.Integer()
-
 
 class estate_offer(models.Model):
     _name = 'estate.offer'

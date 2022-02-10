@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="estate_details_extended" name="estate Details Extended" inherit_id="Real_estate.property_details">
+        <xpath expr="//div[contains(@class, 'container')]/div/div[1]" position="replace">
+        </xpath>
+        <!-- <xpath expr="//div[contains(@class, 'container')]" position="attributes">
+            <attribute name="style">background: grey;</attribute>            
+        </xpath> -->
+    </template>
+</odoo>

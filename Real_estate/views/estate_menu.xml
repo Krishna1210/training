@@ -22,6 +22,9 @@
        <!-- <field name="context">{'search_default_property_ids':'1'} -->
     </record>
 
+
+   
+
     <menuitem id="estate_menu_root" name="Real_estate"/>
 
     <menuitem id="estate_first_level_menu" name="Advertisement" parent="estate_menu_root"/>
